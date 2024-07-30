@@ -1,9 +1,9 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %}{% endblock %}
-{% block decription %}{% endblock %}
-{% block keywords %}{% endblock %}
+{% block title %}Recent Projects{% endblock %}
+{% block description %}Explore the latest projects I’ve worked on.{% endblock %}
+{% block keywords %}projects, portfolio, recent work{% endblock %}
 
 {% block extend_header %}{% endblock %}
 
@@ -12,8 +12,8 @@
 {% block content %}
 <section class="bg-gradient-to-r from-gray-50 to-gray-100 py-16">
   <div class="container mx-auto text-center px-4">
-    <h1 class="text-4xl font-extrabold text-gray-900 mb-6">See My Recent Projects</h1>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Explore the latest projects I’ve worked on. Click on any project to see more details.</p>
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-6" data-aos="fade-up">See My Recent Projects</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Explore the latest projects I’ve worked on. Click on any project to see more details.</p>
   </div>
 </section>
 
@@ -21,7 +21,7 @@
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for obj in object_list %}
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:100 }}">
         <a href="{% url 'main:portfolio' slug=obj.slug %}" class="block">
           <div class="relative w-full aspect-w-16 aspect-h-9">
             <img src="{{ obj.image.url }}" alt="{{ obj.title }}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105">

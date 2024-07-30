@@ -1,43 +1,21 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-<!-- ================================
-Start SEO blocks
-================================= -->
 {% block title %}{% endblock %}
 {% block description %}{% endblock %}
 {% block keywords %}{% endblock %}
-<!-- ================================
-END SEO blocks
-================================= -->
 
-<!-- ================================
-Start CSS blocks
-================================= -->
 {% block extend_header %}{% endblock %}
-<!-- ================================
-END CSS blocks
-================================= -->
-
-<!-- ================================
-Start script blocks
-================================= -->
 {% block extend_footer %}{% endblock %}
-<!-- ================================
-END script blocks
-================================= -->
 
-<!-- ================================
-Start Content
-================================= -->
 {% block content %}
 <section class="bg-gray-100 py-16">
   <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 mb-8 md:mb-0">
+      <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-800 pb-4">{{ object.name|title }}</h1>
       </div>
-      <div class="md:w-1/2 text-center md:text-right">
+      <div class="md:w-1/2 text-center md:text-right" data-aos="fade-left" data-aos-duration="1000">
         <div class="flex flex-col md:flex-row items-center justify-center md:justify-end space-y-2 md:space-y-0 md:space-x-6">
           <div>
             <h4 class="text-xl font-semibold text-gray-600">{{ object.author|title }}</h4>
@@ -53,13 +31,10 @@ Start Content
 
 <section class="py-16">
   <div class="container mx-auto px-4">
-    <div class="bg-white p-6 rounded-lg shadow-lg">
+    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000">
       {{ object.body|safe }}
     </div>
   </div>
 </section>
 
 {% endblock %}
-<!-- ================================
-End Content
-================================= -->

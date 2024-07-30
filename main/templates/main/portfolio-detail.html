@@ -2,20 +2,26 @@
 {% load static %}
 
 {% block title %}Project Detail{% endblock %}
-{% block decription %}{% endblock %}
+{% block description %}{% endblock %}
 {% block keywords %}{% endblock %}
 
 {% block extend_header %}{% endblock %}
 {% block extend_footer %}{% endblock %}
 
 {% block content %}
-<section class="py-14 bg-white">
+<section class="py-14 bg-white mb-10">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-6">
+    <div class="text-center mb-6" data-aos="fade-up">
       <h1 class="text-5xl font-serif font-bold text-gray-900">{{ object.name }}</h1>
       {% comment %} <p class="text-sm font-serif text-gray-900">{{ object.date }}</p> {% endcomment %}
     </div>
-    <div class="prose lg:prose-xl max-w-4xl mx-auto text-gray-800">
+    <hr class="relative bottom-4">
+    {% if object.image %}
+    <div class="mb-6 text-center" data-aos="fade-up" data-aos-delay="200">
+      <img src="{{ object.image.url }}" alt="{{ object.name }}" class="w-full max-w-4xl mx-auto rounded-lg shadow-lg">
+    </div>
+    {% endif %}
+    <div class="prose lg:prose-xl max-w-4xl mx-auto text-gray-800" data-aos="fade-up" data-aos-delay="400">
       {{ object.body|safe }}
     </div>
   </div>

@@ -16,6 +16,7 @@
     <link rel="apple-touch-icon" type="image/jpg" href="{% static 'images/icon.jpg' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 
     {% tailwind_css %}
     {% block extend_header %}{% endblock %}
@@ -88,4 +89,14 @@
     <script src="{% static 'js/script.js' %}"></script>
     {% block extend_footer %}{% endblock %}
   </body>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+      });
+    });
+  </script>
 </html>
