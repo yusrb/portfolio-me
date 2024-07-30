@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Project Detail{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% block extend_header %}{% endblock %}
+{% block extend_footer %}{% endblock %}
+
+{% block content %}
+<section class="py-14 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-6">
+      <h1 class="text-5xl font-serif font-bold text-gray-900">{{ object.name }}</h1>
+      {% comment %} <p class="text-sm font-serif text-gray-900">{{ object.date }}</p> {% endcomment %}
+    </div>
+    <div class="prose lg:prose-xl max-w-4xl mx-auto text-gray-800">
+      {{ object.body|safe }}
+    </div>
+  </div>
+</section>
+{% endblock %}

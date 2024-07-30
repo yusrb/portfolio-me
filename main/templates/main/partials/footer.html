@@ -1,0 +1,40 @@
+{% load static %}
+<footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <ul class="flex space-x-8 mb-6 md:mb-0">
+                <li>
+                    <a href="javascript:void(0)" class="transition-transform transform hover:scale-110">
+                        <img class="w-8 h-8" src="{% static 'images/fb.svg' %}" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/btyo.skzo/?hl=en" class="transition-transform transform hover:scale-110" target="_blank">
+                        <img class="w-8 h-8" src="{% static 'images/insta.svg' %}" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="transition-transform transform hover:scale-110">
+                        <img class="w-8 h-8" src="{% static 'images/twitter.svg' %}" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/brian-ajha-534611298/" class="transition-transform transform hover:scale-110">
+                        <img class="w-8 h-8" src="{% static 'images/linkedin.svg' %}" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+            <div class="text-center md:text-right">
+                <p class="text-lg font-semibold mb-2">
+                    ©{% now 'Y' %} Yusar Brian Sadella. All rights reserved.
+                </p>
+                <p class="text-sm">
+                    Designed with ❤️ by 
+                    <a href="#" target="_blank" class="text-teal-400 hover:underline">
+                        Yusar Brian Sadella
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

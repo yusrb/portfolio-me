@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% block extend_header %}{% endblock %}
+
+{% block extend_footer %}{% endblock %}
+
+{% block content %}
+<section class="w-full bg-gray-100 py-12">
+  <div class="container mx-auto text-center px-4">
+    <h1 class="text-4xl font-extrabold text-gray-800 mb-6">Contact Us</h1>
+    <p class="text-lg text-gray-600">We’d love to hear from you. Fill out the form below and we’ll get back to you as soon as possible.</p>
+  </div>
+</section>
+
+<section class="w-full bg-white py-3">
+  <div class="container mx-auto px-4">
+    <form id="contactForm" method="POST" action="/contact/" class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg border border-gray-200">
+      {% csrf_token %}
+      
+      <div class="mb-6">
+        <label for="name" class="block text-gray-700 text-lg font-medium mb-2">Name</label>
+        {{ form.name }}
+      </div>
+
+      <div class="mb-6">
+        <label for="email" class="block text-gray-700 text-lg font-medium mb-2">Email</label>
+        {{ form.email }}
+      </div>
+
+      <div class="mb-6">
+        <label for="message" class="block text-gray-700 text-lg font-medium mb-2">Message</label>
+        {{ form.message }}
+      </div>
+
+      <button type="submit" class="bg-teal-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-teal-700 transition duration-300">Submit</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
